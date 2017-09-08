@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生活美学</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <style>
+        body {
+            background: #f8f8f8;
+        }
+        .wrap {
+            padding: 2%;
+            box-sizing: border-box;
+            background: #fff;
+        }
+        .imgBox {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+            background: #cccccc;
+        }
+        .imgCon {
+            width: 100%;
+            height: 100%;
+        }
+        /*.imgCon img {
+            z-index: 11;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }*/
+        .imgShow {
+            z-index: 33;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 56px;
+            background: rgba(0,0,0,0.3);
+        }
+        .imgShow p {
+            line-height: 56px;
+            padding-left: 2%;
+            box-sizing: border-box;
+            color: #ffffff;
+        }
+        .lifeCon  ul {
+            overflow: hidden;
+        }
+        .lifeCon li {
+            position: relative;
+            float: left;
+            width: 49%;
+            margin-right: 2%;
+            margin-bottom: 3%;
+        }
+        .lifeCon li img {
+            float: left;
+            width: 50%;
+            height: auto;
+        }
+        .lifeCon ul li:nth-child(2n) {
+            margin-right: 0;
+        }
+        .lifeCon div {
+            float: right;
+            width: 50%;
+            height: 100%;
+            padding-left: 2%;
+            box-sizing: border-box;
+            background: rgba(255,255,255,0.5);
+        }
+        .lifeCon div h2 {
+            width: 90%;
+            font-size: 18px;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+        .lifeCon em {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: 0;
+            bottom: 0;
+            background: url("images/more.png") no-repeat;
+        }
+
+        @media screen and (max-width: 768px) {
+            .imgBox {
+                margin-bottom: 3%;
+            }
+            .lifeCon li {
+                width: 100%;
+            }
+            .lifeCon li img {
+                width: 30%;
+            }
+            .lifeCon div {
+                width: 70%;
+            }
+            .wrap {
+                padding: 4%;
+            }
+            .lifeCon div h2 {
+                font-size: 1rem;
+            }
+            .imgShow {
+                height: 40px;
+            }
+            .imgShow p {
+                line-height: 40px;
+            }
+        }
+        @media (min-width: 320px) and (max-width: 500px) {
+            .lifeCon p {
+                display: none;
+            }
+        }
+        @media screen and (max-width: 1080px) {
+            .lifeCon div {
+                padding-left: 4%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <div class="wrap">
+        <div class="imgBox">
+            <div class="imgCon">
+                <img src="images/banner-2-1.jpg" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+            <div class="imgShow">
+                <p>怎么去黑头收缩毛孔?去黑头面膜什么牌子好</p>
+                <p>怎么去黑头收缩毛孔?去黑头面膜什么牌子好</p>
+                <p>怎么去黑头收缩毛孔?去黑头面膜什么牌子好</p>
+            </div>
+        </div>
+        <div class="lifeCon">
+            <ul>
+                <li class="wow fadeInUp">
+                    <a href="">
+                        <img src="images/life.jpg" alt="">
+                        <div>
+                            <h2>什么面膜清洁毛孔效果好？试试矿物泥面膜</h2>
+                            <p>平时我们在护肤的时候，往往只关注于怎么补充养分，而忽略了要先帮肌肤排清不要的浊质</p>
+                            <em></em>
+                        </div>
+                    </a>
+                </li>
+                <li class="wow fadeInUp">
+                    <a href="">
+                        <img src="images/life2.jpg" alt="">
+                        <div>
+                            <h2>什么面膜清洁毛孔效果好？试试矿物泥面膜</h2>
+                            <p>平时我们在护肤的时候，往往只关注于怎么补充养分，而忽略了要先帮肌肤排清不要的浊质</p>
+                            <em></em>
+                        </div>
+                    </a>
+                </li>
+                <li class="wow fadeInUp">
+                    <a href="">
+                        <img src="images/life3.jpg" alt="">
+                        <div>
+                            <h2>什么面膜清洁毛孔效果好？试试矿物泥面膜</h2>
+                            <p>平时我们在护肤的时候，往往只关注于怎么补充养分，而忽略了要先帮肌肤排清不要的浊质</p>
+                            <em></em>
+                        </div>
+                    </a>
+                </li>
+                <li class="wow fadeInUp">
+                    <a href="">
+                        <img src="images/life4.jpg" alt="">
+                        <div>
+                            <h2>什么面膜清洁毛孔效果好？试试矿物泥面膜</h2>
+                            <p>平时我们在护肤的时候，往往只关注于怎么补充养分，而忽略了要先帮肌肤排清不要的浊质</p>
+                            <em></em>
+                        </div>
+                    </a>
+                </li>
+                <li class="wow fadeInUp">
+                    <a href="">
+                        <img src="images/life5.jpg" alt="">
+                        <div>
+                            <h2>什么面膜清洁毛孔效果好？试试矿物泥面膜</h2>
+                            <p>平时我们在护肤的时候，往往只关注于怎么补充养分，而忽略了要先帮肌肤排清不要的浊质</p>
+                            <em></em>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer></footer>
+    <script src="js/jquery-2.2.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.js"></script>
+    <script src="js/toast.js"></script>
+    <script src="js/moveline.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        var wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 100,
+            mobile: true,
+            live: true
+        });
+        wow.init();
+    </script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>植物微粒</title>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .wrap {
+            padding-bottom: 2%;
+        }
+        body {
+            background: #f8f8f8;
+        }
+        html {
+            font-size: 14px;
+        }
+        .navBox {
+            width: 100%;
+            max-width: 1200px;
+            position: relative;
+        }
+        .imgBox img {
+            width: 100%;
+        }
+        .nav-tit {
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.2);
+        }
+        .nav-tit ul li {
+            width: 23%;
+            float: left;
+            margin-right: 15%;
+            text-align: center;
+            cursor: pointer;
+            line-height: 0.6;
+        }
+        .nav-tit ul li:nth-child(2) i {
+            width: 40%;
+        }
+        .nav-tit ul li:last-child {
+            margin-right: 0;
+        }
+        .nav-tit ul li span {
+            color: #ffffff;
+        }
+        .nav-tit ul li i {
+            display: inline-block;
+            height: 1px;
+            background: #fff;
+        }
+        .conBox {
+            padding: 0;
+        }
+        .conBox li {
+            margin-bottom: 10%;
+        }
+        .conBox > div > p {
+            width: 88%;
+            text-indent: 2em;
+            max-width: 1000px;
+            font-size: 16px;
+            margin: 30px auto 130px;
+            line-height: 1.5;
+        }
+        .conBox > div {
+            display: none;
+        }
+        .conBox > div:nth-child(2) {
+            display: block;
+        }
+        .conBox dd {
+            z-index: 99;
+            position: absolute;
+            height: 100%;
+            background: rgba(255,255,255,0.8);
+            top:  -10.8%;
+            left: 8%;
+            padding: 8%;
+            box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+        .conBox dl {
+            position: relative;
+        }
+        .conBox dl dd, .conBox dl dt {
+            width: 50%;
+        }
+        .conBox dt {
+            float: right;
+        }
+        .conBox h2 {
+            font-size: 20px;
+            margin-left: -33%;
+            font-weight: bold;
+            margin-bottom: 12%;
+        }
+        .conBox > div:last-child {
+            margin-top: 20px;
+            padding: 80px 60px 100px;
+            background: #fff url("images/tree.jpg") no-repeat right;
+        }
+        .conBox > div:last-child h2 {
+            width: 60%;
+            font-size: 18px;
+            margin: 0 0 5% 0;
+        }
+        .conBox > div:last-child p {
+            width: 60%;
+            text-indent: 2em;
+            font-size: 14px;
+            margin: 0 0 30px 0;
+        }
+        @media screen and (max-width: 768px){
+            .wrap {
+                width: 100%;
+            }
+            .conBox li {
+                margin-bottom: 18%;
+            }
+            .nav-tit ul li:nth-child(2) i {
+                width: 80%;
+            }
+            .conBox > div > p {
+                font-size: 1rem;
+                margin-bottom: 3.57rem;
+            }
+            .nav h2 {
+                font-size: 1.42rem;
+                margin-bottom: 1.2rem;
+            }
+            .nav > div {
+                height: 5rem;
+            }
+            .conBox h2 {
+                font-size: 1.14rem;
+            }
+            .conBox dl {
+                padding-right: 4%;
+            }
+            .conBox > div:last-child {
+                padding: 5%;
+            }
+            .conBox > div:last-child p {
+                padding: 5%;
+                background: rgba(255,255,255,0.8);
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .conBox > div:last-child p {
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .conBox dl dt {
+                width: 100%;
+            }
+            .conBox dl dd {
+                width: 90%;
+                background: rgba(255,255,255,0.8);
+            }
+            .conBox h2 {
+                margin-left: -18%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <header></header>
+    <div class="wrap">
+        <div class="navBox">
+            <div class="imgBox"><img src="images/rectangle1.jpg" alt=""></div>
+            <div class="nav-tit">
+            <div>
+                <h2 class="wow fadeInDown">— &nbsp; 植物微粒 &nbsp; —</h2>
+                <ul>
+                    <li class="fadeInDown wow" data-wow-delay="0.2s" data-wow-duration="0.5s"><span>创新技术</span><br><i></i></li>
+                    <li class="fadeInDown wow" data-wow-delay="0.3s" data-wow-duration="0.5s"><span>护肤秘籍</span><br><i></i></li>
+                    <li class="fadeInDown wow" data-wow-delay="0.4s" data-wow-duration="0.5s"><span>植物王国</span><br><i></i></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div class="conBox">
+            <div>
+                <p>润滋蔓核心技术的成功应用就是向自然学习、向自然致敬的典范，它通过三大核心技术的突破，实现将植物、矿物天然活性与生物微粒胶体技术完美结合的创举。</p>
+                <ul>
+                    <li>
+                        <dl class="clearfix">
+                            <dd class="">
+                                <h2>植物、矿物微粒胶体技术</h2>
+                                <p> 润滋蔓从众多热带植物中选取无毒、无副作用且具有天然活性的植物（如椰子、油棕、甘蔗、玉米、柠檬、香茅），及无毒、副作用的天然矿物质，通过生物微粒胶体技术，制成可以深入皮肤深层的微粒分子，给皮肤带来深层清洁和滋养。</p>
+                            </dd>
+                            <dt data-wow-delay="0.5s" class=""><img src="images/a1.jpg" alt=""></dt>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="clearfix">
+                            <dd class="">
+                                <h2>独特的分离与隔离技术</h2>
+                                <p> 润滋蔓超细生物微粒胶体分子结合水的摩擦作用，可以轻松渗透皮肤缝隙及毛孔间的污渍之中，利用植物、矿物微粒胶体自身亲水性极和疏水性极，用物理方法将污渍从皮肤中隔离并分解成容易冲洗干净的细小分子，从而到到深层清洁的功效。</p>
+                            </dd>
+                            <dt data-wow-delay="0.5s" class=""><img src="images/a2.jpg" alt=""></dt>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="clearfix">
+                            <dd class="">
+                                <h2>激活植物天然抗菌活性</h2>
+                                <p> 天然植物经过生物微粒化后，能够激活植物本身具胡的的天然抗菌活性，抗菌微粒能够深入病菌的DNA或RNA，对革兰氏阴性菌、阳性菌和真菌，APG08-12都有抗菌活性，能预防皮肤细菌的滋生。</p>
+                            </dd>
+                            <dt data-wow-delay="0.5s" class=""><img src="images/a3.jpg" alt=""></dt>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <p>润滋蔓核心技术的成功应用就是向自然学习、向自然致敬的典范，它通过三大核心技术的突破，实现将植物、矿物天然活性与生物微粒胶体技术完美结合的创举。</p>
+                <ul>
+                    <li>
+                        <dl class="clearfix">
+                            <dd class="">
+                                <h2>打开皮肤深层洁净通道</h2>
+                                <p>富含天然多聚葡萄糖苷、天然甘油、天然柠檬酸、天然椰子油、柠檬油、香茅等植物微粒小的小分子能够轻松进入皮肤之间的缝隙和毛孔之间，去除死皮、清洁毛孔，开皮肤深层洁净通道，深层洁净皮肤。</p>
+                            </dd>
+                            <dt data-wow-delay="0.5s" class=""><img class="" src="images/rectangle-16-copy-1.jpg" alt=""></dt>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="clearfix">
+                            <dd class="">
+                                <h2>隔离外部污染，深层养护面部肌肤</h2>
+                                <p>天然植物、矿物微粒在洁净皮肤的过程中，能够吸收家空气中的水分，在肌肤表面形成一种“水保护膜”，在帮助皮肤隔离外部污染的同时，通过携带的植物微粒养分对皮肤进行深层养护，平衡皮肤油脂分泌并促进胶进蛋白的再生。</p>
+                            </dd>
+                            <dt data-wow-delay="0.5s" class=""><img class="" src="images/rectangle-16-copy.jpg" alt=""></dt>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="clearfix">
+                            <dd class="">
+                                <h2>打开皮肤深层洁净通道</h2>
+                                <p>富含天然多聚葡萄糖苷、天然甘油、天然柠檬酸、天然椰子油、柠檬油、香茅等植物微粒小的小分子能够轻松进入皮肤之间的缝隙和毛孔之间，去除死皮、清洁毛孔，开皮肤深层洁净通道，深层洁净皮肤。</p>
+                            </dd>
+                            <dt data-wow-delay="0.5s" class=""><img class="" src="images/rectangle-16-copy-3.jpg" alt=""></dt>
+                        </dl>
+                    </li>
+
+                </ul>
+            </div>
+            <div>
+                <h2>植物王国</h2>
+                <p>倍受上天宠爱的马来西亚风光旖旎的海岸线上，海水像绿松石般澄澈、透明，金黄色的沙滩洁净柔软。秘境小岛刁曼岛，像太平洋上璀璨的珍珠，美丽迷人，五彩斑斓的蝴蝶翩翩起舞、挺拔翠绿的椰树随风摇曳，，良好的生态环境滋养了世界上最丰富的的热带动植物资源，润滋蔓植物微粒护肤品的原材料就是这片土地最美的馈赠。</p>
+                <p>润滋蔓植物微粒来自椰子、油棕、甘蔗、玉米、柠檬、香茅等天然植物的提取物，矿物微粒原材料由无毒矿物微粒化技术非常先进、成熟的德国进口，为每一款润滋蔓护肤品的生产提供最好的原材料保障。</p>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+    <script src="js/jquery-2.2.2.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.js"></script>
+    <script src="js/toast.js"></script>
+    <script src="js/moveline.js"></script>
+    <script>
+        var wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 100,
+            mobile: true,
+            live: true
+        });
+        wow.init();
+        $(function () {
+            $(".nav-tit li").on("click",function () {
+                var num = $(this).index(),
+                    wi = "";
+                console.log(num);
+                if($(window).width() > 768) {
+                    wi = "40%"
+                } else {
+                    wi = "80%"
+                }
+                $(this).children('i').animate({
+                    "width" : wi+""
+                });
+                $(this).siblings('li').children('i').css("width","0")
+                $(".imgBox img").attr("src","images/rectangle"+ num + ".jpg");
+                $(".conBox > div").eq(num).fadeIn().siblings('div').fadeOut();
+            })
+            $(".conBox dd").addClass("wow fadeInUp");
+            $(".conBox dt").addClass("wow fadeInUp");
+            $(" .conBox > div > p").addClass("wow fadeInUp");
+        })
+    </script>
+    <script src="js/header.js"></script>
+
+</body>
+</html>

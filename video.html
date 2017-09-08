@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>新闻资讯</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .wrap {
+            padding-bottom: 2%;
+        }
+        body {
+            background: #f8f8f8;
+        }
+        html {
+            font-size: 14px;
+        }
+        .nav-titBox {
+            width: 100%;
+            max-width: 1200px;
+            position: relative;
+        }
+        .imgBox img {
+            width: 100%;
+        }
+        .nav-tit {
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.2);
+        }
+        .nav-tit > div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            min-width: 300px;
+            height: 95px;
+            margin: auto;
+        }
+        .nav-tit ul li {
+            width: 23%;
+            float: left;
+            margin-right: 2%;
+            text-align: center;
+            cursor: pointer;
+            line-height: 0.6;
+        }
+        .nav-tit ul li:nth-child(1) i {
+            width: 46%;
+        }
+        .nav-tit h2 {
+            font-size: 30px;
+            text-align: center;
+            font-family: PingFang-SC;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+        .nav-tit ul li:last-child {
+            margin-right: 0;
+        }
+        .nav-tit ul li span {
+            color: #ffffff;
+        }
+        .nav-tit ul li i {
+            display: inline-block;
+            height: 1px;
+            background: #fff;
+        }
+        /*
+        *  视频
+        */
+        .conBox > div {
+            padding: 2%;
+            box-sizing: border-box;
+            display: none;
+            background: #fff;
+        }
+        .conBox > div:first-child {
+            display: block;
+        }
+        .conBox li {
+            position: relative;
+            float: left;
+            width: 49%;
+            margin: 0 2% 2% 0;
+        }
+        .conBox li p {
+            font-size: 16px;
+            line-height: 50px;
+            color: #ffffff;
+        }
+        .conBox li div {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 50px;
+            width: 100%;
+            padding-left: 20px;
+            background: rgba(0,0,0,0.2) url("images/playVedio.png") no-repeat calc(100% - 20px) center;
+            box-sizing: border-box;
+        }
+        .conBox ul li:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        @media screen and (max-width: 768px){
+            .wrap {
+                width: 100%;
+            }
+            .conBox > div {
+                padding: 4%;
+            }
+            .nav-tit h2 {
+                font-size: 1.57rem;
+                margin-bottom: 1.2rem;
+            }
+            .nav-tit > div {
+                height: 4rem;
+            }
+            .conBox h2 {
+                font-size: 1.14rem;
+            }
+            .nav-tit ul li:nth-child(1) i {
+                width: 80%;
+            }
+        }
+        @media screen  and  (max-width: 500px){
+            .conBox li {
+                position: relative;
+                float: left;
+                width: 100%;
+                margin: 0 0 3% 0;
+            }
+        }
+        /*品牌动态*/
+        .conBox .list-wrap{
+            padding: 20px 100px 30px;
+        }
+        .news h1{
+            margin-bottom: 3.5rem;
+        }
+        .newsUl{
+            width: 90%;
+            margin:0 auto 20px;
+            overflow: hidden;
+        }
+        .newsUl li{
+            width: 100%;
+            border-bottom:1px solid #ccc;
+            margin-bottom: 0;
+            padding: 24px 0;
+        }
+        .newsUl li:hover{
+            background: #00a088;
+        }
+        .newsUl li a{
+            display: block;
+            text-decoration: none;
+            color: #333333;
+            position: relative;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            -ms-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all 1s;
+        }
+        .newsUl h1{
+            font-size: 14px;
+            color: #666;
+            padding-right: 2%;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            -ms-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all 1s;
+
+        }
+        .newsUl h1 span:last-child {
+            float: right;
+        }
+        .newsUl h2 {
+            font-size: 18px;
+            margin-top: 15px;
+            line-height: 1.5;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            -ms-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all 1s;
+        }
+        .newsUl li p {
+            color: #666666;
+            font-size: 12px;
+            margin-top: 8px;
+            line-height: 1.5;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            -ms-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all 1s;
+        }
+        .newsUl li:hover a,.newsUl li:hover h2,.newsUl li:hover h1 ,.newsUl li:hover p{
+            left: 10px;
+            color: #ffffff;
+        }
+
+        .page {
+            width: 90%;
+            margin: 0 auto;
+        }
+        .page a{
+            border: 1px solid #ddd;
+            padding: 6px;
+            text-align: center;
+        }
+        .page .removehover{
+            border: 0;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .page input{
+            width: 22px;
+            height: 22px;
+            text-align: center;
+            margin: 0 3px;
+        }
+        .page a:hover{
+            background-color: #00a088;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .page .removehover:hover{
+            background-color: transparent;
+        }
+        @media (max-width: 1200px) {
+            .conBox .list-wrap{
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header></header>
+<div class="wrap">
+    <div class="nav-titBox">
+        <div class="imgBox"><img src="images/rectangle1.jpg" alt=""></div>
+        <div class="nav-tit">
+            <div>
+                <h2 class="fadeInUp wow">— &nbsp; 新闻资讯 &nbsp; —</h2>
+                <ul>
+                    <li class="fadeInUp wow" data-wow-delay="0.2s" data-wow-duration="0.5s"><span>品牌动态</span><br><i></i></li>
+                    <li class="fadeInUp wow" data-wow-delay="0.3s" data-wow-duration="0.5s"><span>行业资讯</span><br><i></i></li>
+                    <li class="fadeInUp wow" data-wow-delay="0.4s" data-wow-duration="0.5s"><span>微粒课堂</span><br><i></i></li>
+                    <li class="fadeInUp wow" data-wow-delay="0.5s" data-wow-duration="0.5s"><span>视频专区</span><br><i></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="conBox">
+        <div class="list-wrap">
+            <ul class="newsUl">
+                <li><a href="" src="newDetail.html">
+                    <h1><span>2017.09.09</span><span>公司新闻</span></h1>
+                    <h2>画眉烦恼多？详解眉毛的画法，一支三头眉笔解决所有“眉”问题！</h2>
+                    <p>嘘～菌菌今天要给我的小仙女们表演变脸绝技，哦不，是演示卸妆水的正确使用方法，不过变脸的主角不是我，而是这款值得推荐的卸妆神器。</p>
+                </a></li>
+                <li><a href="" src="newDetail.html">
+                    <h1><span>2017.09.09</span><span>公司新闻</span></h1>
+                    <h2>画眉烦恼多？详解眉毛的画法，一支三头眉笔解决所有“眉”问题！</h2>
+                    <p>嘘～菌菌今天要给我的小仙女们表演变脸绝技，哦不，是演示卸妆水的正确使用方法，不过变脸的主角不是我，而是这款值得推荐的卸妆神器。</p>
+                </a></li>
+                <li><a href="" src="newDetail.html">
+                    <h1><span>2017.09.09</span><span>公司新闻</span></h1>
+                    <h2>画眉烦恼多？详解眉毛的画法，一支三头眉笔解决所有“眉”问题！</h2>
+                    <p>嘘～菌菌今天要给我的小仙女们表演变脸绝技，哦不，是演示卸妆水的正确使用方法，不过变脸的主角不是我，而是这款值得推荐的卸妆神器。</p>
+                </a></li>
+                <li><a href="" src="newDetail.html">
+                    <h1><span>2017.09.09</span><span>公司新闻</span></h1>
+                    <h2>画眉烦恼多？详解眉毛的画法，一支三头眉笔解决所有“眉”问题！</h2>
+                    <p>嘘～菌菌今天要给我的小仙女们表演变脸绝技，哦不，是演示卸妆水的正确使用方法，不过变脸的主角不是我，而是这款值得推荐的卸妆神器。</p>
+                </a></li>
+                <li><a href="" src="newDetail.html">
+                    <h1><span>2017.09.09</span><span>公司新闻</span></h1>
+                    <h2>画眉烦恼多？详解眉毛的画法，一支三头眉笔解决所有“眉”问题！</h2>
+                    <p>嘘～菌菌今天要给我的小仙女们表演变脸绝技，哦不，是演示卸妆水的正确使用方法，不过变脸的主角不是我，而是这款值得推荐的卸妆神器。</p>
+                </a></li>
+                <li><a href="" src="newDetail.html">
+                    <h1><span>2017.09.09</span><span>公司新闻</span></h1>
+                    <h2>画眉烦恼多？详解眉毛的画法，一支三头眉笔解决所有“眉”问题！</h2>
+                    <p>嘘～菌菌今天要给我的小仙女们表演变脸绝技，哦不，是演示卸妆水的正确使用方法，不过变脸的主角不是我，而是这款值得推荐的卸妆神器。</p>
+                </a></li>
+                <li><a href="" src="newDetail.html">
+                    <h1><span>2017.09.09</span><span>公司新闻</span></h1>
+                    <h2>画眉烦恼多？详解眉毛的画法，一支三头眉笔解决所有“眉”问题！</h2>
+                    <p>嘘～菌菌今天要给我的小仙女们表演变脸绝技，哦不，是演示卸妆水的正确使用方法，不过变脸的主角不是我，而是这款值得推荐的卸妆神器。</p>
+                </a></li>
+                <li><a href="" src="newDetail.html">
+                    <h1><span>2017.09.09</span><span>公司新闻</span></h1>
+                    <h2>画眉烦恼多？详解眉毛的画法，一支三头眉笔解决所有“眉”问题！</h2>
+                    <p>嘘～菌菌今天要给我的小仙女们表演变脸绝技，哦不，是演示卸妆水的正确使用方法，不过变脸的主角不是我，而是这款值得推荐的卸妆神器。</p>
+                </a></li>
+                <li><a href="" src="newDetail.html">
+                    <h1><span>2017.09.09</span><span>公司新闻</span></h1>
+                    <h2>画眉烦恼多？详解眉毛的画法，一支三头眉笔解决所有“眉”问题！</h2>
+                    <p>嘘～菌菌今天要给我的小仙女们表演变脸绝技，哦不，是演示卸妆水的正确使用方法，不过变脸的主角不是我，而是这款值得推荐的卸妆神器。</p>
+                </a></li>
+                <li><a href="" src="newDetail.html">
+                    <h1><span>2017.09.09</span><span>公司新闻</span></h1>
+                    <h2>画眉烦恼多？详解眉毛的画法，一支三头眉笔解决所有“眉”问题！</h2>
+                    <p>嘘～菌菌今天要给我的小仙女们表演变脸绝技，哦不，是演示卸妆水的正确使用方法，不过变脸的主角不是我，而是这款值得推荐的卸妆神器。</p>
+                </a></li>
+            </ul>
+            <div class="page">
+                <a href="javascript:;"><<上一页</a>
+                <a href="javascript:;">1</a>
+                <a href="javascript:;">...</a>
+                <a href="javascript:;">12</a>
+                <a href="javascript:;">13</a>
+                <a href="javascript:;">14</a>
+                <a href="javascript:;">15</a>
+                <a href="javascript:;">下一页>></a>
+                <a href="javascript:;" class="removehover">共15页</a>
+                <a href="javascript:;" class="removehover">到第<input type="text" value="14">页</a>
+            </div>
+        </div>
+        <div class="list-wrap">
+            <ul class="newsUl">
+                <li><a href="" src="newDetail.html">
+                    <h1><span>2017.09.09</span><span>行业资讯</span></h1>
+                    <h2>画眉烦恼多？详解眉毛的画法，一支三头眉笔解决所有“眉”问题！</h2>
+                    <p>嘘～菌菌今天要给我的小仙女们表演变脸绝技，哦不，是演示卸妆水的正确使用方法，不过变脸的主角不是我，而是这款值得推荐的卸妆神器。</p>
+                </a></li>
+                <li><a href="" src="newDetail.html">
+                    <h1><span>2017.09.09</span><span>行业资讯</span></h1>
+                    <h2>画眉烦恼多？详解眉毛的画法，一支三头眉笔解决所有“眉”问题！</h2>
+                    <p>嘘～菌菌今天要给我的小仙女们表演变脸绝技，哦不，是演示卸妆水的正确使用方法，不过变脸的主角不是我，而是这款值得推荐的卸妆神器。</p>
+                </a></li>
+                <li><a href="" src="newDetail.html">
+                    <h1><span>2017.09.09</span><span>行业资讯</span></h1>
+                    <h2>画眉烦恼多？详解眉毛的画法，一支三头眉笔解决所有“眉”问题！</h2>
+                    <p>嘘～菌菌今天要给我的小仙女们表演变脸绝技，哦不，是演示卸妆水的正确使用方法，不过变脸的主角不是我，而是这款值得推荐的卸妆神器。</p>
+                </a></li>
+                <li><a href="" src="newDetail.html">
+                    <h1><span>2017.09.09</span><span>行业资讯</span></h1>
+                    <h2>画眉烦恼多？详解眉毛的画法，一支三头眉笔解决所有“眉”问题！</h2>
+                    <p>嘘～菌菌今天要给我的小仙女们表演变脸绝技，哦不，是演示卸妆水的正确使用方法，不过变脸的主角不是我，而是这款值得推荐的卸妆神器。</p>
+                </a></li>
+                <li><a href="" src="newDetail.html">
+                    <h1><span>2017.09.09</span><span>行业资讯</span></h1>
+                    <h2>画眉烦恼多？详解眉毛的画法，一支三头眉笔解决所有“眉”问题！</h2>
+                    <p>嘘～菌菌今天要给我的小仙女们表演变脸绝技，哦不，是演示卸妆水的正确使用方法，不过变脸的主角不是我，而是这款值得推荐的卸妆神器。</p>
+                </a></li>
+                <li><a href="" src="newDetail.html">
+                    <h1><span>2017.09.09</span><span>行业资讯</span></h1>
+                    <h2>画眉烦恼多？详解眉毛的画法，一支三头眉笔解决所有“眉”问题！</h2>
+                    <p>嘘～菌菌今天要给我的小仙女们表演变脸绝技，哦不，是演示卸妆水的正确使用方法，不过变脸的主角不是我，而是这款值得推荐的卸妆神器。</p>
+                </a></li>
+                <li><a href="" src="newDetail.html">
+                    <h1><span>2017.09.09</span><span>行业资讯</span></h1>
+                    <h2>画眉烦恼多？详解眉毛的画法，一支三头眉笔解决所有“眉”问题！</h2>
+                    <p>嘘～菌菌今天要给我的小仙女们表演变脸绝技，哦不，是演示卸妆水的正确使用方法，不过变脸的主角不是我，而是这款值得推荐的卸妆神器。</p>
+                </a></li>
+                <li><a href="" src="newDetail.html">
+                    <h1><span>2017.09.09</span><span>行业资讯</span></h1>
+                    <h2>画眉烦恼多？详解眉毛的画法，一支三头眉笔解决所有“眉”问题！</h2>
+                    <p>嘘～菌菌今天要给我的小仙女们表演变脸绝技，哦不，是演示卸妆水的正确使用方法，不过变脸的主角不是我，而是这款值得推荐的卸妆神器。</p>
+                </a></li>
+                <li><a href="" src="newDetail.html">
+                    <h1><span>2017.09.09</span><span>行业资讯</span></h1>
+                    <h2>画眉烦恼多？详解眉毛的画法，一支三头眉笔解决所有“眉”问题！</h2>
+                    <p>嘘～菌菌今天要给我的小仙女们表演变脸绝技，哦不，是演示卸妆水的正确使用方法，不过变脸的主角不是我，而是这款值得推荐的卸妆神器。</p>
+                </a></li>
+                <li><a href="" src="newDetail.html">
+                    <h1><span>2017.09.09</span><span>行业资讯</span></h1>
+                    <h2>画眉烦恼多？详解眉毛的画法，一支三头眉笔解决所有“眉”问题！</h2>
+                    <p>嘘～菌菌今天要给我的小仙女们表演变脸绝技，哦不，是演示卸妆水的正确使用方法，不过变脸的主角不是我，而是这款值得推荐的卸妆神器。</p>
+                </a></li>
+                <div class="page">
+                    <a href="javascript:;"><<上一页</a>
+                    <a href="javascript:;">1</a>
+                    <a href="javascript:;">...</a>
+                    <a href="javascript:;">12</a>
+                    <a href="javascript:;">13</a>
+                    <a href="javascript:;">14</a>
+                    <a href="javascript:;">15</a>
+                    <a href="javascript:;">下一页>></a>
+                    <a href="javascript:;" class="removehover">共15页</a>
+                    <a href="javascript:;" class="removehover">到第<input type="text" value="14">页</a>
+                </div>
+            </ul>
+        </div>
+        <div>
+            <ul class="clearfix">
+                <li><a href=""><img src="images/1.jpg" alt="">
+                    <div class="con">
+                        <p>彩妆教学视频</p>
+                    </div>
+                </a></li>
+                <li><a href=""><img src="images/20.jpg" alt="">
+                    <div class="con">
+                        <p>彩妆教学视频</p>
+                    </div>
+                </a></li>
+                <li><a href=""><img src="images/30.jpg" alt="">
+                    <div class="con">
+                        <p>彩妆教学视频</p>
+                    </div>
+                </a></li>
+                <li><a href=""><img src="images/40.jpg" alt="">
+                    <div class="con">
+                        <p>彩妆教学视频</p>
+                    </div>
+                </a></li>
+                <li><a href=""><img src="images/50.jpg" alt="">
+                    <div class="con">
+                        <p>彩妆教学视频</p>
+                    </div>
+                </a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="clearfix">
+                <li><a href=""><img src="images/1.jpg" alt="">
+                    <div class="con">
+                        <p>彩妆教学视频</p>
+                    </div>
+                </a></li>
+                <li><a href=""><img src="images/20.jpg" alt="">
+                    <div class="con">
+                        <p>彩妆教学视频</p>
+                    </div>
+                </a></li>
+                <li><a href=""><img src="images/30.jpg" alt="">
+                    <div class="con">
+                        <p>彩妆教学视频</p>
+                    </div>
+                </a></li>
+                <li><a href=""><img src="images/40.jpg" alt="">
+                    <div class="con">
+                        <p>彩妆教学视频</p>
+                    </div>
+                </a></li>
+                <li><a href=""><img src="images/50.jpg" alt="">
+                    <div class="con">
+                        <p>彩妆教学视频</p>
+                    </div>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer></footer>
+<script src="js/jquery-2.2.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/moveline.js"></script>
+<script src="js/header.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 100,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+    $(function () {
+        $(".nav-tit li").on("click",function () {
+            var num = $(this).index(),
+                wi = "";
+            console.log(num);
+            if($(window).width() > 768) {
+                wi = "46%"
+            } else {
+                wi = "80%"
+            }
+            $(this).children('i').animate({
+                "width" : wi
+            });
+            $(this).siblings('li').children('i').css("width","0")
+            $(".imgBox img").attr("src","images/rectangle"+ num + ".jpg");
+            $(".conBox > div").eq(num).fadeIn().siblings('div').fadeOut();
+        })
+        $(".conBox dd").addClass("wow fadeInUp");
+        $(".conBox dt").addClass("wow fadeInUp");
+        $(" .conBox > div > p").addClass("wow fadeInUp");
+    })
+</script>
+</body>
+</html>

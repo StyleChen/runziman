@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小贴士</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <style>
+        body {
+            background: #f8f8f8;
+        }
+        .wrap {
+            padding: 30px;
+            box-sizing: border-box;
+            /*background: #fff;*/
+        }
+        .content {
+            background: #fff;
+        }
+        .imgBox {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+            background: #cccccc;
+        }
+        .imgCon img {
+            /*position: absolute;
+            left: 0;
+            top: 0;*/
+            /*display: none;*/
+        }
+        .imgCon {
+            width: 100%;
+            height: 100%;
+        }
+        .imgShow {
+            z-index: 33;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 56px;
+            background: rgba(0,0,0,0.3);
+        }
+        .imgShow p {
+            display: none;
+            line-height: 56px;
+            padding-left: 2%;
+            box-sizing: border-box;
+            color: #ffffff;
+        }
+        .imgShow p:first-child{
+            display: block;
+        }
+        .articleCon ul {
+            overflow: hidden;
+        }
+        .articleCon li {
+            position: relative;
+            float: left;
+            width: 32%;
+            margin: 0 2% 2% 0;
+            padding: 1%;
+            padding-bottom: 10%;
+            box-sizing: border-box;
+            border: 1px solid #eeeeee;
+        }
+        .articleCon li div {
+            position: absolute;
+            bottom: 4%;
+            right: 2%;
+            overflow: hidden;
+        }
+        .articleCon li span {
+            float: left;
+            margin-right: 5px;
+            line-height: 24px;
+        }
+        .articleCon li div a {
+            float: left;
+            width: 24px;
+            padding-top: 24px;
+            margin-right: 4px;
+            background: #ccc;
+        }
+        .articleCon li div a:nth-child(2) {
+            background: url("images/weibo.png") no-repeat;
+        }
+        .articleCon li div a:nth-child(3) {
+            background: url("images/weixin.png") no-repeat;
+        }
+
+        .articleCon li h2 {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .articleCon img {
+            width: 100%;
+        }
+        .articleCon li:hover {
+            box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+        }
+        .articleCon ul li:nth-child(3n) {
+            margin-right: 0;
+        }
+        @media screen and (max-width: 800px){
+            .imgShow {
+                height: 40px;
+            }
+            .imgShow p {
+                line-height: 40px;
+            }
+            .articleCon ul li:nth-child(3n) {
+                 margin-right: 4%;
+             }
+            .articleCon ul li {
+                width: 48%;
+                margin-right: 4%;
+            }
+            .articleCon ul li:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+        @media screen and (max-width: 375px) {
+            .articleCon ul li {
+                width: 100%;
+                padding: 4%;
+                padding-bottom: 14%;
+                margin-right: 0;
+            }
+
+        }
+        @media screen and (max-width: 768px) {
+            .wrap {
+                padding: 4%;
+            }
+        }
+    </style>
+</head>
+<body>
+<header></header>
+<div class="wrap content">
+    <div class="imgBox">
+        <div class="imgCon">
+            <img src="images/banner-2-1.jpg" alt="">
+        </div>
+        <div class="imgShow">
+            <p>怎么去黑头收缩毛孔?去黑头面膜什么牌子好</p>
+            <p>怎么去黑头收缩毛孔?去黑头面膜什么牌子好1</p>
+            <p>怎么去黑头收缩毛孔?去黑头面膜什么牌子好2</p>
+        </div>
+    </div>
+    <div class="articleCon">
+        <ul>
+            <li class="wow fadeIn" data-wow-delay="0.1s">
+                <a href="">
+                    <dl>
+                        <dt><img src="images/article.jpg" alt=""></dt>
+                        <dd>
+                            <h2>怎么去黑头收缩毛孔?去黑头面膜什么牌子好</h2>
+                        </dd>
+                    </dl>
+                </a>
+                <div><span>分享到：</span><a href=""></a><a href=""></a></div>
+            </li>
+            <li class="wow fadeIn" data-wow-delay="0.2s">
+                <a href="">
+                    <dl>
+                        <dt><img src="images/article2.jpg" alt=""></dt>
+                        <dd>
+                            <h2>怎么去黑头收缩毛孔?去黑头面膜什么牌子好</h2>
+                        </dd>
+                    </dl>
+                </a>
+                <div><span>分享到：</span><a href=""></a><a href=""></a></div>
+            </li>
+            <li class="wow fadeIn" data-wow-delay="0.3s">
+                <a href="">
+                    <dl>
+                        <dt><img src="images/article3.jpg" alt=""></dt>
+                        <dd>
+                            <h2>怎么去黑头收缩毛孔?去黑头面膜什么牌子好</h2>
+                        </dd>
+                    </dl>
+                </a>
+                <div><span>分享到：</span><a href=""></a><a href=""></a></div>
+            </li>
+            <li class="wow fadeIn" data-wow-delay="0.1s">
+                <a href="">
+                    <dl>
+                        <dt><img src="images/article4.jpg" alt=""></dt>
+                        <dd>
+                            <h2>怎么去黑头收缩毛孔?去黑头面膜什么牌子好</h2>
+                        </dd>
+                    </dl>
+                </a>
+                <div><span>分享到：</span><a href=""></a><a href=""></a></div>
+            </li>
+            <li class="wow fadeIn" data-wow-delay="0.2s">
+                <a href="">
+                    <dl>
+                        <dt><img src="images/article5.jpg" alt=""></dt>
+                        <dd>
+                            <h2>怎么去黑头收缩毛孔?去黑头面膜什么牌子好</h2>
+                        </dd>
+                    </dl>
+                </a>
+                <div><span>分享到：</span><a href=""></a><a href=""></a></div>
+            </li>
+            <li class="wow fadeIn" data-wow-delay="0.3s">
+                <a href="">
+                    <dl>
+                        <dt><img src="images/article6.jpg" alt=""></dt>
+                        <dd>
+                            <h2>怎么去黑头收缩毛孔?去黑头面膜什么牌子好</h2>
+                        </dd>
+                    </dl>
+                </a>
+                <div><span>分享到：</span><a href=""></a><a href=""></a></div>
+            </li>
+            <li class="wow fadeIn" data-wow-delay="0.1s">
+                <a href="">
+                    <dl>
+                        <dt><img src="images/article7.jpg" alt=""></dt>
+                        <dd>
+                            <h2>怎么去黑头收缩毛孔?去黑头面膜什么牌子好</h2>
+                        </dd>
+                    </dl>
+                </a>
+                <div><span>分享到：</span><a href=""></a><a href=""></a></div>
+            </li>
+            <li class="wow fadeIn" data-wow-delay="0.2s">
+                <a href="">
+                    <dl>
+                        <dt><img src="images/article8.jpg" alt=""></dt>
+                        <dd>
+                            <h2>怎么去黑头收缩毛孔?去黑头面膜什么牌子好</h2>
+                        </dd>
+                    </dl>
+                </a>
+                <div><span>分享到：</span><a href=""></a><a href=""></a></div>
+            </li>
+        </ul>
+    </div>
+</div>
+<footer></footer>
+<script src="js/jquery-2.2.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/moveline.js"></script>
+<script src="js/header.js"></script>
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW({offset:200}).init();
+    /*var boxHeight = $(".imgCon img").eq(0).height();
+        console.log(boxHeight);
+        $(".imgCon").height(boxHeight);*/
+    /*var num=0;
+    var a = $(".imgshow p").length;
+    function changeNum() {
+        num++;
+        if(num>=a){
+            num = 0;
+        }
+        changeAll(num);
+    }
+    function changeAll(sum) {
+        $(".imgShow p").eq(sum).show().addClass("wow fadeInUp").siblings("p").removeClass("wow fadeInUp").hide();
+    }
+    setTimeout(function () {
+        setInterval(changeNum,3000);
+    },3000)*/
+
+</script>
+</body>
+</html>

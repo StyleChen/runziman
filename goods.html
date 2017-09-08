@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产品列表</title>
+    <meta name="viewport"  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .goods > h2 {
+            margin-top: 60px;
+            font-size: 24px;
+            padding-left: 4%;
+        }
+        .goods > p {
+            margin-bottom: 60px;
+            padding-left: 4%;
+        }
+        .goods li {
+            margin-bottom: 2%;
+            padding: 0 4%;
+        }
+        .goods ul li:nth-child(2n) dl {
+            background: #fdf7e9;
+        }
+        .goods dl {
+            position: relative;
+            overflow: hidden;
+            background: #f5f8fa;
+        }
+        .goods dt{
+            float: left;
+        }
+        .goods dt {
+            width: 63.6%;
+        }
+        .goods dd {
+            position: absolute;
+            width: 36.4%;
+            height: 100%;
+            right: 0;
+            bottom: 0;
+            padding: 4% 2%;
+            box-sizing: border-box;
+        }
+        .goods dd h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .goods dd p {
+            line-height: 1.71;
+        }
+        .goods dd strong {
+            display: block;
+            position: absolute;
+            right: 7%;
+            bottom: 6%;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border: 1px solid #333333;
+        }
+        @media screen and (max-width: 768px){
+            .wrap > h2 {
+                margin-top: 3rem;
+                font-size: 1.42rem;
+                padding-left: 4%;
+            }
+            .goods {
+                padding: 10px 0;
+            }
+            .wrap > p {
+                margin-bottom: 3rem;
+                padding-left: 4%;
+            }
+            .goods dt {
+                width: 100%;
+            }
+            .goods dd {
+                position: absolute;
+                width: 100%;
+                height:40px;
+                right: 0;
+                bottom: 0;
+                padding: 0;
+                box-sizing: border-box;
+                background: rgba(0,0,0,0.5);
+            }
+            .goods dd h2 {
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+                line-height: 40px;
+                padding-left: 4%;
+                color: #fff;
+            }
+            .goods dd p {
+                display: none;
+                font-size: 1rem;
+                line-height: 1.71;
+            }
+            .goods dd strong {
+               display: none;
+            }
+        }
+        .wrap {
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+<header></header>
+<div class="wrap goods">
+    <div class="imgBox wow fadeInUp"><img src="images/img-4-0.jpg" alt=""></div>
+    <h2 class="fadeInUp wow">MATERNAL AND CHILD</h2>
+    <p class="fadeInUp wow">母婴系列</p>
+    <ul>
+        <li class="wow fadeInUp">
+            <dl>
+                <dt><img src="images/img-4-1.jpg" alt=""></dt>
+                <dd>
+                    <h2>茶树植萃去屑净油洗发露 （针对油性头皮）</h2>
+                    <p>为有头屑、油性头皮定制，配方蕴含天然茶树精油去屑力与柠檬草精萃润泽力，根源净化头皮环境，调理水油平衡，4周抵御头屑反复</p>
+                    <strong>>查看详情</strong></dd>
+            </dl>
+        </li>
+        <li class="wow fadeInUp">
+            <dl>
+                <dt><img src="images/img-4-2.jpg" alt=""></dt>
+                <dd>
+                    <h2>茶树植萃去屑净油洗发露 （针对油性头皮）</h2>
+                    <p>为有头屑、油性头皮定制，配方蕴含天然茶树精油去屑力与柠檬草精萃润泽力，根源净化头皮环境，调理水油平衡，4周抵御头屑反复</p>
+                    <strong>>查看详情</strong></dd>
+            </dl>
+        </li>
+        <li class="wow fadeInUp">
+            <dl>
+                <dt><img src="images/img-4-3.jpg" alt=""></dt>
+                <dd>
+                    <h2>茶树植萃去屑净油洗发露 （针对油性头皮）</h2>
+                    <p>为有头屑、油性头皮定制，配方蕴含天然茶树精油去屑力与柠檬草精萃润泽力，根源净化头皮环境，调理水油平衡，4周抵御头屑反复</p>
+                    <strong>>查看详情</strong></dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+<footer></footer>
+<script src="js/jquery-2.2.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/moveline.js"></script>
+<script src="js/header.js"></script>
+<script>
+    new WOW({offset:50}).init();
+</script>
+</body>
+</html>

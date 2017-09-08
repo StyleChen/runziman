@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>联系我们</title>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .wrap {
+            padding-bottom: 2%;
+        }
+        body {
+            background: #f8f8f8;
+        }
+        html {
+            font-size: 14px;
+        }
+        .navBox {
+            width: 100%;
+            max-width: 1200px;
+            position: relative;
+        }
+        .imgBox img {
+            width: 100%;
+        }
+        .nav-tit {
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.2);
+        }
+        .nav-tit ul li {
+            width: 23%;
+            float: left;
+            margin-right: 2%;
+            text-align: center;
+            cursor: pointer;
+            line-height: 0.6;
+        }
+        .nav-tit ul li:nth-child(1) i {
+            width: 48%;
+        }
+
+        .nav-tit ul li:last-child {
+            margin-right: 0;
+        }
+        .nav-tit ul li span {
+            color: #ffffff;
+        }
+        .nav-tit ul li i {
+            display: inline-block;
+            height: 1px;
+            background: #fff;
+        }
+        .conBox > div {
+            padding: 2% 5%;
+            box-sizing: border-box;
+            display: none;
+            background: #fff;
+        }
+        .conBox > div:nth-child(1) {
+            display: block;
+        }
+
+        /*
+        * 联系方式
+        */
+        .adressBox {
+            margin: 0;
+            background: url("images/rectangle-5.jpg") no-repeat left;
+            background-size: auto 100%;
+        }
+        .address {
+            width: 56%;
+            float: right;
+            background: rgba(255,255,255,0.6);
+        }
+        .address h2 {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .address em,.address p ,.address h3 {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+        .address h3 {
+            margin: 0;
+        }
+        .address h2 {
+
+        }
+        .address li {
+            padding-left: 5%;
+        }
+        .address h2 {
+            padding-left: 5%;
+        }
+        .address li div {
+            padding-left: 1%;
+            border-left: 1px solid #333333;
+        }
+        .address ul li:first-child {
+            background: url("images/address.png") no-repeat left top;
+        }
+        .address ul li:nth-child(2) {
+            background: url("images/phone.png") no-repeat left top;
+        }
+        .address ul li:nth-child(3) {
+            background: url("images/information.png") no-repeat left top;
+        }
+        .address ul li:nth-child(4) {
+            background: url("images/entnet.png") no-repeat left top;
+        }
+
+
+        .conBox .row li {
+            margin-bottom: 20px;
+        }
+       .container {
+           width: 100%;
+           max-width: 1200px;
+           margin: 0;
+           padding: 0;
+       }
+        input {
+            float: left;
+            width: 100%;
+            font-size: 14px;
+            border: 0;
+            height: 40px;
+            line-height: 38px;
+            outline: none;
+            background: none;
+            /*line-height: 54px;*/
+            margin-right: 5%;
+            color: #000;
+            border-bottom:1px solid #eee;
+            padding-left: 0;
+        }
+
+        :-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+            color: #ccc; opacity:1;
+        }
+
+        ::-moz-placeholder{ /* Mozilla Firefox 19+ */
+            color: #ccc;opacity:1;
+        }
+        input:-ms-input-placeholder,textarea:-ms-input-placeholder{
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.26);
+        }
+
+        input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.26);;
+        }
+        .conBox > div > h2 {
+            font-size: 24px;
+            margin-bottom: 6px;
+        }
+        .conBox > div > p {
+            margin: 34px 0 50px 0;
+        }
+        .conBox > div:nth-child(3) > p{
+            margin-bottom: 126px;
+            line-height: 1.8;
+        }
+        .submit {
+            width: 120px;
+            height: 40px;
+            border: 1px solid #eeeeee;
+            margin: 60px 0 90px 0;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+        }
+
+        /*
+        * 招聘
+        */
+
+        .job > li {
+            position: relative;
+           padding-left: 6%;
+            margin-bottom: 12%;
+        }
+        .job > li li {
+            list-style: decimal;
+            line-height: 1.71;
+        }
+        .job > li div {
+            padding: 9% 5% 8% 5%;
+            background: url("images/bitmap-1.png") no-repeat;
+            background-size:100%;
+            box-shadow: 0  2px 10px 0 rgba(0,0,0,0.1) ;
+        }
+        .job > li p {
+            font-size: 14px;
+            line-height: 1.71;
+            letter-spacing: 0.7px;
+        }
+        .job h2 {
+            z-index: 2;
+            position: absolute;
+            width: 100%;
+            top: 4%;
+            left: 0;
+            font-size: 24px;
+        }
+        .job h3 {
+            font-size: 16px;
+            margin: 10px 0 10px -1em;
+            margin-left: -1em;
+        }
+        .job > li .make {
+            z-index: 1;
+            top: -110px;
+            left: -2%;
+            position: absolute;
+            padding: 0;
+            font-size: 144px;
+            line-height: 176px;
+            text-align: center;
+            background: none;
+            box-shadow: none;
+            color: #efefef;
+        }
+
+        @media screen and (max-width: 768px){
+            .wrap {
+                width: 100%;
+            }
+            .conBox > div > p {
+                font-size: 1rem;
+                margin: 1rem 0 1.71rem 0;
+            }
+            .nav h2 {
+                font-size: 1.42rem;
+                margin-bottom: 1.2rem;
+            }
+            .nav > div {
+                height: 6rem;
+            }
+            .conBox > div > h2 {
+                font-size: 1.71rem;
+                margin-bottom: 0;
+            }
+            .conBox .row li {
+                margin-bottom: 1rem;
+                overflow: hidden;
+            }
+            .submit {
+                margin: 1.71rem auto;
+            }
+            .address li {
+                padding-left: 8%;
+            }
+            .job > li div {
+                padding: 14% 5% 8% 5%;
+            }
+            .job > li .make {
+                font-size: 4rem;
+                top: -94px;
+            }
+            .job h2 {
+                font-size: 1.43rem;
+                top: 18px;
+                margin-top: 4px;
+            }
+            .job h3 {
+                margin: 10px 0 10px -1em;
+            }
+            .nav-tit ul li:nth-child(1) i {
+                width: 80%;
+            }
+            .address h2 {
+                font-size: 1.29rem;
+                line-height: 3;
+                margin-bottom: 4px;
+            }
+        }
+
+        @media (min-width: 500px) and (max-width: 768px) {
+            .address {
+                width: 90%;
+            }
+
+        }
+        @media screen and (max-width: 1080px) {
+            .address {
+                padding-left: 4%;
+            }
+        }
+        @media screen and (max-width: 500px) {
+            .address {
+                width: 100%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+<header></header>
+<div class="wrap">
+    <div class="navBox">
+        <div class="imgBox"><img src="images/rectangle1.jpg" alt=""></div>
+        <div class="nav-tit">
+            <div>
+                <h2 class="fadeInDown wow">— &nbsp; 联系我们 &nbsp; —</h2>
+                <ul>
+                    <li class="fadeInDown wow" data-wow-delay="0.2s" data-wow-duration="0.5s"><span>联系方式</span><br><i></i></li>
+                    <li class="fadeInDown wow" data-wow-delay="0.3s" data-wow-duration="0.5s"><span>在线留言</span><br><i></i></li>
+                    <li class="fadeInDown wow" data-wow-delay="0.4s" data-wow-duration="0.5s"><span>人才招聘</span><br><i></i></li>
+                    <li class="fadeInDown wow" data-wow-delay="0.5s" data-wow-duration="0.5s"><span>合作申请</span><br><i></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="conBox container">
+        <div>
+            <p>福建贝诗特生活用品有限公司，总投资人民币两千万，是一家集研发、生产、销售为一体的健康环保实体型企业。自身实体企业的优势，针对市场上日化化工类产品，研发出一套完全不含化工成分，不含任何添加剂的一系列涵盖所有日常生活所需的日化产品。</p>
+            <p>目前公司已经拥有多项自主研发的产品发明专利； 贝诗特系研发、设计、生产、销售为一体的实体型企业，为人类的健康、地球的环保做不懈的努力！自创了“绿业健康生活”自主品牌，将用自主研发所有涉及民生的健康、环保产品打造一个真正的健康产品全球连锁销售平台；产品涉及民生所有生活领域的洗涤护理系列产品，均为零添加、零化工纯植物的健康环保产品。</p>
+            <div class="row adressBox">
+                <div class="address">
+                    <h2>福建贝诗特进出口贸易有限公司</h2>
+                    <ul>
+                        <li>
+                            <div>
+                                <h3>ADDRESS</h3>
+                                <em>地址</em></div>
+                            <p>厦门市湖里区枋钟路2370号金山财富广场5号楼1104（品牌总部）</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>PHONE</h3>
+                                <em>电话</em></div>
+                            <p>0592—6021620</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>EMALL</h3>
+                                <em>公司邮箱</em></div>
+                            <p>boss@lyrzm.com</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>WEBSITE</h3>
+                                <em>网址</em></div>
+                            <p>www.lyrzm.com</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div style="font-size: 12px;width:100%;height : 430px;margin: 30px auto;overflow: hidden" id="mapContainer" ></div>
+        </div>
+        <div>
+            <h2>MESSAGE</h2><span>在线留言</span>
+            <p>将您对我们的产品的疑问或者意见反馈提交给我们，我们将尽快给您答复。<br>您的意见和建议，将帮助我们改进产品和服务，您留下的每个字都将被用来改善我们的服务。</p>
+            <ul class="row">
+                <li class="col-md-6"><span>姓名</span><input type="text" placeholder="填写您的真实姓名便于我们与您联系"></li>
+                <li class="col-md-6"><span>详情地址</span><input type="text" placeholder="填写您的详细地址"></li>
+                <li class="col-md-6"><span>电子邮箱</span><input type="text" placeholder="填写您的电子邮箱"></li>
+                <li class="col-md-6"><span>产品信息</span><input type="text" placeholder="产品信息"></li>
+                <li class="col-md-6"><span>联系电话</span><input type="text" placeholder="填写您的手机号码"></li>
+                <li class="col-md-6"><span>咨询/反馈信息</span><input type="text" placeholder="填写您想要咨询或者反馈的信息"></li>
+                <li class="col-md-6"><span>公司名称</span><input type="text" placeholder="填写您所在公司名称"></li>
+            </ul>
+            <div class="submit">提交</div>
+        </div>
+        <div>
+            <h2>JOIN US</h2>
+            <div><span>加入我们</span><span>简历投递至：hr@lyrzm.com</span></div>
+            <p>润滋蔓核心团队，是一群志同道合的小伙伴<br>有老当益壮的资深专家，有青春勃发的市场新锐<br>认同润滋蔓的品牌理念和价值观，同怀携手成长的美好愿景<br>我们深信我们所从事的是一份有根、有情的事业<br>同量天地宽，共度日月长<br>润滋蔓期待与你同行。。。。。</p>
+            <ul class="job">
+                <li>
+                    <h2>销售专员</h2>
+                    <div class="make">01</div>
+                    <div>
+                        <h3>岗位职责</h3>
+                        <ul>
+                            <li>负责以电话、网络销售及市场销售所形式向全国客户进行公司产品推广工作；</li>
+                            <li>通过电话沟通及约访, 寻求销售机会并努力完成各项销售指标；</li>
+                            <li>具备较强的市场分析、营销、推广能力和良好的人际沟通、协调能力，分析和解决问题的能力；</li>
+                            <li>喜欢销售工作，，有无经验均可。</li>
+                            <li>欢迎应届生。</li>
+                        </ul>
+                        <h3>任职要求</h3>
+                        <ul>
+                            <li>一年以上电话销售经验中专以上学历，20-35岁，普通话标准，能承受压力，有挑战高薪的魄力.</li>
+                            <li>思维活跃、善于沟通，具有一定的业务谈判技巧.</li>
+                            <li>口齿伶俐、声音洪亮、性格开朗、有良好的团队精神.</li>
+                            <li>有营销或销售相关工作经验者优佳.</li>
+                            <li>欢迎有吃苦耐劳精神的广大应届生加入（有专业培训）。</li>
+                        </ul>
+                        <h3>福利待遇</h3>
+                        <ul>
+                            <li>薪酬：无责任底薪（2000-4000）+抽成（10%-20%）+奖金（平均收入不低于5000）</li>
+                            <li>福利：法定五险+带薪年假+节日福利+法定假日+各项培训</li>
+                            <li>晋升：每三个月一次级别晋升及加薪机会</li>
+                            <li>职业发展空间：销售人员—销售主管—公司副总-创业伙伴</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <h2>运营策划</h2>
+                    <div class="make">02</div>
+                    <div>
+                        <h3>岗位职责</h3>
+                        <ul>
+                            <li>负责对产品运营活动的策划、执行、产品推广策略规划； </li>
+                            <li>负责品牌建设或市场推广营销方案的策划 </li>
+                            <li>各类APP与网站资源合作的规划、开拓与执行； </li>
+                            <li>对渠道运营情况进行跟踪、收集市场信息、竞争信息，并对数据结果进行统计分析； </li>
+                            <li>负责微博、微信公众账号的活动策划、推广策略、实施执行，提高粉丝数等。 </li>
+                            <li>负责市场品牌运营、活动策划的文案撰写，包括广告文案、产品宣传推广文案、活动规划等；参与市场活动，市场推广的创意构思和文案美化； </li>
+                        </ul>
+                        <h3>任职要求： </h3>
+                        <ul>
+                            <li>大学本科及以上学历，市场营销类或中文类等相关专业优先；</li>
+                            <li>2、3年以上同行业相关经验，有互联网产品策划、活动策划等工作经验者优先； </li>
+                            <li>敏锐的市场洞察力、文字功底强，富有创意、工作细心、责任心强，有良好的沟通协调能力； </li>
+                            <li>熟悉市场及公司品牌宣传，产品推广、广告投效、市场营销等策划方案的撰写、资讯收集。</li>
+                            <li>熟悉各种新媒体传播方式、善于运用新媒体进行传播推广，关注热点时间，善于将热点时间与运营项目结合。 上班时间：5.5天 薪资：4500以上</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2>COLLABORATION<br>APPLICATIONS</h2><span>合作申请</span>
+            <p>认同润兹曼产品定位及经营理念，有意向操作一项全新科技提炼的纯植物护肤品且提倡环保的品牌，那么我们是合适您的</p>
+            <ul class="row">
+                <li class="col-md-6"><span>姓名</span><input type="text" placeholder="填写您的真实姓名便于我们与您联系"></li>
+                <li class="col-md-6"><span>公司名称</span><input type="text" placeholder="请填写您所在的公司名称"></li>
+                <li class="col-md-6"><span>职位</span><input type="text" placeholder="请填写您所在的公司的职位"></li>
+                <li class="col-md-6"><span>详细地址</span><input type="text" placeholder="填写您的详细地址"></li>
+                <li class="col-md-6"><span>电子邮箱</span><input type="text" placeholder="填写您的电子邮箱"></li>
+                <li class="col-md-6"><span>为什么加入润姿蔓</span><input type="text" placeholder="简单的填写您选择我们的理由"></li>
+                <li class="col-md-6"><span>联系电话</span><input type="text" placeholder="填写您的手机号码"></li>
+            </ul>
+            <div class="submit">提交</div>
+        </div>
+    </div>
+</div>
+<footer></footer>
+<script src="js/jquery-2.2.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/moveline.js"></script>
+<script src="js/header.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 100,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+    $(function () {
+        $(".nav-tit li").on("click",function () {
+            var num = $(this).index(),
+                wi = "";
+            console.log(num);
+            if($(window).width() > 768) {
+                wi = "48%"
+            } else {
+                wi = "80%"
+            }
+            $(this).children('i').animate({
+                "width" : wi
+            });
+            $(this).siblings('li').children('i').css("width","0")
+            $(".imgBox img").attr("src","images/rectangle"+ num + ".jpg");
+            $(".conBox > div").eq(num).fadeIn().siblings('div').fadeOut();
+        })
+        $(".conBox dd").addClass("wow fadeInUp");
+        $(".conBox dt").addClass("wow fadeInUp");
+    })
+</script>
+
+<script src="http://webapi.amap.com/maps?v=1.3&key=358607218035717aee14d60f21068f7d"></script>
+<script>
+    $("#mapContainer").height($("#catImg").height());
+    var windowsArr = [];
+    var marker = [];
+    var mapObj = new AMap.Map("mapContainer", {
+        resizeEnable: true,
+        resizeEnable: true,
+        center: [118.154673,24.536612],//地图中心点
+        zoom: 13,//地图显示的缩放级别
+        keyboardEnable: false
+    });
+
+    //添加查询结果的marker&infowindow
+    function addmarker() {
+        var lngX = "118.154673";
+        var latY = "24.536612";
+        var markerOption = {
+            map: mapObj,
+            icon:"http://webapi.amap.com/theme/v1.3/markers/n/mark_b1.png",
+            position: [lngX, latY]
+        };
+        var mar = new AMap.Marker(markerOption);
+        marker.push([lngX, latY]);
+
+        var infoWindow = new AMap.InfoWindow({
+            content: "<h4><font color=\"#00a6ac\">福建贝诗特进出口贸易有限公司</font></h4>" + createContent("厦门市湖里区枋钟路2370号金山财富广场5号楼1104（品牌总部）", "0592—6021620"),
+            size: new AMap.Size(300, 0),
+            autoMove: true,
+            offset: new AMap.Pixel(0, -30)
+        });
+        windowsArr.push(infoWindow);
+        infoWindow.open(mapObj, mar.getPosition());
+    }
+
+    function createContent(address, tel) {  //窗体内容
+        address=address;
+        tel=tel;
+        var s=[];
+        s.push("地址：" +address);
+        s.push("电话：" +tel);
+        return s.join("<br>");
+    }
+    addmarker();
+    //createContent("厦门市湖里区枋钟路2370号金山财富广场5号楼1104（品牌总部）", "0592—6021620");
+</script>
+
+</body>
+</html>

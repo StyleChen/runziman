@@ -1,0 +1,646 @@
+body{
+    padding-top: 100vh;
+    /*padding-bottom: 500px;*/
+}
+ html {
+    background: #fff;
+     padding-top: 0;
+}
+ .wrap {
+     background: none;
+ }
+header {
+    background: none;
+}
+.container-fluid>.navbar-collapse {
+    margin: 0;
+}
+
+/*banner下面产品分类*/
+.productClass{
+    margin-top:5.71rem;
+    display: flex;
+    justify-content: space-between;
+}
+.productClass>.row{
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.productClass>.row>a{
+    display: block;
+    position: relative;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+.productClass>.row>a>div{
+    display: block;
+    overflow: hidden;
+}
+
+
+.productMask{
+    position: absolute;
+    width:calc(100% - 20px);
+    height: 100%;
+    top: 0;
+    left: 10px;
+    background: rgba(0,0,0,0.2);
+}
+.productMask>h1{
+    font-size: 1.71rem;
+    margin-top:17.5%;
+    margin-bottom: 5px;
+}
+.productMask>p{
+    font-size: 0.85rem;
+}
+.productMask>h1,.productMask>p{
+    color:#FFF;
+    margin-left: 21.1%;
+}
+.productClass>.row>a img{
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+.productClass>.row>a:hover img{
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(1.2);
+}
+
+/*季节轮播*/
+.season{
+    margin-top:5.71rem;
+    position: relative;
+    overflow-x: hidden;
+}
+.spring{
+    background: url("../images/spring-copy.png") no-repeat 3.4% 36%;
+    -webkit-background-size: 90%;
+    background-size: 90%;
+    overflow: hidden;
+}
+.proImg,.proDesc{
+    float: left;
+}
+.proImg{
+    width: 33.3%;
+    margin:4.2% 0 4.2% 6.4%;
+}
+.proDesc{
+    margin-top: 10.7%;
+    width: 42.5%;
+}
+.proDesc>h2{
+    font-size: 1.71rem;
+    font-weight: 600;
+    color:#333;
+}
+.proDesc> p{
+    margin-top: 5.9%;
+    margin-left: 4.2%;
+    font-size:1rem;
+    line-height: 1.5;
+}
+.seasonNav{
+    position: absolute;
+    right:4.2%;
+    top: 20%;
+    text-align: right;
+}
+.seasonNav li{
+    color:#ccc;
+    cursor: pointer;
+    font-size:12px;
+}
+.seasonNav i{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: #cccccc;
+    margin-left: 8px;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+}
+.seasonNav .active{
+    color:#333;
+}
+.seasonNav .active i{
+    background-color: #333;
+}
+.proUl{
+    overflow: hidden;
+    width:400%;
+}
+.proUl li{
+    width:25%;
+    float: left;
+}
+.proUl li:nth-child(1) {
+    background: url("../images/spring-copy.png") no-repeat center;
+    background-size: contain;
+    display: block;
+}
+.proUl li:nth-child(2) {
+    background: url("../images/summer@1x.png") no-repeat center;
+    background-size: contain;
+}
+.proUl li:nth-child(3) {
+    background: url("../images/autumn@1x.png") no-repeat center;
+    background-size: contain;
+}
+.proUl li:nth-child(4) {
+    background: url("../images/winter@1x.png") no-repeat center;
+    background-size: contain;
+}
+
+.entrance h2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+/*广告*/
+.advert{
+    margin-top: 7rem;
+    background-color: #f5f5f5;
+}
+.entrance{
+    overflow: hidden;
+}
+.entrance dt{
+    /*float: left;*/
+}
+.entrance dd{
+    padding:4.1% 0 4.1% 14%;
+}
+.entrance dd h2 a{
+    font-size: 1.7rem;
+    color:#333;
+    font-weight:600;
+    line-height: 1.5;
+}
+/*产品列表*/
+.proList{
+    margin-top: 8.3%;
+    overflow: hidden;
+}
+.proNum{
+    display: block;
+    position: relative;
+}
+.proListTitle{
+    margin-top: 26.6%;
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+    font-weight:600;
+}
+.proNum>span{
+    position: absolute;
+    background: #00a088;
+    z-index:2;
+}
+.proNum .borderTop{
+    width: 0;
+    height: 3px;
+    top: 0;
+    left: 0;
+}
+.proNum .borderRight{
+    width: 3px;
+    height: 0;
+    top: 0;
+    right: 0;
+}
+.proNum .borderBottom{
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    right: 0;
+}
+.proNum .borderLeft{
+    width: 3px;
+    height: 0;
+    bottom: 0;
+    left: 0;
+}
+.proList .col-md-6,.proList .col-xs-12{
+    padding: 0;
+}
+
+.proList li:nth-child(even) .proNum dt,.proList li:nth-child(even) .proNum dd{
+    float: right;
+}
+.proList .proNum dd{
+    padding:0 7% 0 5%;
+}
+/*
+护肤小贴士
+*/
+.care{
+    overflow: hidden;
+    margin-top: 10rem;
+    background: #F8F8F8;
+}
+.careTitle{
+    font-size: 2.5rem;
+    font-weight:normal;
+    margin-top: 5.7rem;
+    font-family: "新宋体";
+}
+.careCarousel{
+    margin-top: 2.5rem;
+    padding-top: 0.3rem;
+    margin-bottom: 7rem;
+    position: relative;
+}
+.careCarousel .prev{
+    background: url("../images/prev.png") no-repeat center;
+    left:calc(4.375% - 20px);
+}
+.careCarousel .next{
+    background: url("../images/next.png") no-repeat center;
+}
+.careCarousel .prev,.careCarousel .next{
+    display: block;
+    position: absolute;
+    z-index:2;
+    width: 40px;
+    height: 40px;
+    top:calc(50% - 20px);
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    cursor: pointer;
+}
+.careCarousel .next{
+    background: url("../images/next.png") no-repeat center;
+    right:calc(4.375% - 20px);
+}
+.carouselWrap{
+    width: 84%;
+    overflow: hidden;
+    margin:0 auto;
+}
+.carouselWrap>ul{
+    min-width: 3000px;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.carouselLi{
+    position: relative;
+    float: left;
+    width: 310px;
+    margin-right: 30px;
+    padding: 20px;
+    background: #ffffff;
+}
+.carouselLi div {
+    position: absolute;
+    bottom: 4%;
+    right: 5%;
+    overflow: hidden;
+}
+.carouselLi div span {
+    float: left;
+}
+.carouselLi div a {
+    float: left;
+    width: 24px;
+    padding-top: 24px;
+    margin-right: 4px;
+}
+.carouselLi div a:nth-child(2) {
+    background: url("../images/weibo.png") no-repeat;
+}
+.carouselLi div a:nth-child(3) {
+    background: url("../images/weixin.png") no-repeat;
+}
+@media (max-width:768px) {
+
+    .productClass>.row>a {
+        padding: 0 8px;
+        margin-bottom: 16px;
+        overflow: hidden;
+    }
+    .productClass>.row {
+        margin: 0;
+    }
+    .productClass {
+        padding: 0 8px;
+    }
+    .productMask {
+        width: calc(100% - 16px);
+        left: 8px;
+    }
+    .navbar-brand {
+        padding: 0;
+    }
+    .navbar-brand img {
+        height: 36px;
+        margin: 10px;
+    }
+    .carouselWrap{
+        width: 100%;
+    }
+    .carouselLi{
+        width: 100vw;
+        padding-bottom: 40px;
+    }
+    .carouselLi dl {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .carouselLi img {
+        width: 100%;
+    }
+    .text-right {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .carouselWrap>ul{
+        padding: 0;
+    }
+    .navbar-default .navbar-nav>li>a span{
+        color:#fff;
+    }
+    #content {
+        display: none;
+    }
+    body {
+        padding-top: 0;
+    }
+
+}
+.carouselLi dd a{
+    color:#333;
+    display: block;
+    margin: 20px 0 45px;
+}
+.carouselLi:hover{
+    -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.careCarousel .prev,.careCarousel .next {
+    top: calc(44% - 20px);
+}
+.carouselLi div {
+    position: absolute;
+    bottom: 4%;
+    width: 40%;
+    right: 5%;
+}
+/*
+生活美学
+*/
+.row {
+    margin: 0 auto;
+}
+.col-md-6 {
+    padding-left: 0;
+}
+.life{
+    margin-bottom: 5.7em;
+}
+.life .careTitle{
+    margin-bottom: 4.3rem;
+}
+.lifewrap dl{
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.lifewrap dl dd{
+    height: 100%;
+    overflow: hidden;
+}
+.lifewrap dl h2{
+    margin-top:10%;
+    margin-bottom: 3.3%;
+}
+.lifeBig h2{
+    font-size: 1.7rem;
+}
+.lifeSmall h2{
+    font-size: 1.3rem;
+}
+.lifeSmall p{
+    font-size: 0.86rem;
+}
+.lifeLink{
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.lifeLink span{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 30px;
+    right: 80px;
+    opacity:0;
+    color:#333;
+    background: url(../images/more.png) no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+.swiper-container {
+    display: none;
+}
+
+/*
+新闻资讯
+*/
+.news{
+    border-top:1px solid transparent;
+    padding-bottom: 5.7rem;
+    margin-bottom: 11rem;
+}
+.news h1{
+    margin-bottom: 3.5rem;
+}
+.newsUl{
+    width: 90%;
+    border-top:2px dotted #333333;
+    margin:0 auto;
+    overflow: hidden;
+}
+.newsUl li{
+    border-bottom:2px dotted #333333;
+}
+.newsUl li:hover{
+    background: #00a088;
+}
+.newsUl li a{
+    display: block;
+    text-decoration: none;
+    line-height: 36px;
+    font-size: 12px;
+    color: #333333;
+    position: relative;
+    white-space:nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all 1s;
+}
+.newsUl li:hover a{
+    left: 10px;
+    color: #ffffff;
+}
+.newsType{
+    margin-left: 2.85rem;
+    margin-right: 4.28rem;
+}
+@media (max-width: 768px) {
+    .productMask>h1 {
+        font-size: 1.14rem;
+    }
+    .life,.news,.productClass,.season,.careTitle,.careCarousel {
+        margin-bottom: 2rem;
+    }
+    .proDesc>h2 {
+        font-size: 1.14rem;
+    }
+    .proDesc> p {
+        font-size: 0.8rem;
+    }
+    .proListTitle {
+        font-size: 1.14rem;
+    }
+    .careTitle {
+        font-size: 1.43rem;
+        font-weight: normal;
+        line-height: 6rem;
+        margin: 0;
+        font-family: "新宋体";
+    }
+    .proDesc {
+        margin-top: 5%;
+    }
+    .proDesc h2 {
+        line-height: 1.5;
+    }
+    .entrance dt {
+        float: left;
+        width: 50%;
+        padding-right: 0;
+    }
+    .entrance{
+        padding: 0 10px;
+    }
+    .entrance dt img {
+    }
+    .entrance .col-md-6:last-child {
+        float: left;
+        width: 50%;
+        padding-left: 10px;
+    }
+    .lifeSmall h2 {
+        font-size: 1.14rem;
+    }
+    .carouselLi dd a {
+        font-size: 1.14rem;
+        margin: 8px 0 10px;
+    }
+   .lifeLink p,.smoll span {
+        display: none;
+    }
+    .lifewrap dl {
+        margin-bottom: 20px;
+    }
+    .lifeBig h2 {
+        font-size: 1.14rem;
+    }
+    .lifewrap .lifeBig {
+        margin-bottom: 0;
+    }
+    .lifewrap dl h2 {
+        margin: 0;
+        line-height: 1.5;
+    }
+    .life .careTitle {
+        margin-bottom: 0;
+        background: #f8f8f8;
+    }
+    .lifewrap .lifeBig {
+        position: relative;
+        margin-bottom: 14px;
+    }
+    .lifeBig dt {
+        padding: 0;
+    }
+    .lifewrap .lifeBig dd {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        height: 40px;
+        background: rgba(0,0,0,0.6);
+    }
+    .lifewrap .lifeBig h2 {
+        line-height: 40px;
+        color: #ffffff;
+    }
+    .col-xs-4 {
+        padding: 0 8px;
+    }
+    .entrance dd {
+        padding: 0;
+    }
+    .entrance dd h2 {
+        font-size: 1.14rem;
+        line-height: 1.5;
+        padding-top: 2%;
+        font-weight: bold;
+    }
+    .entrance dd p {
+        font-size: 0.8rem;
+    }
+
+    .careCarousel {
+       margin: 0;
+    }
+    .productClass, .season,.advert,.care{
+        margin-top: 2rem;
+    }
+    .lifeLink span{
+        opacity: 1;
+        right: 15px;
+    }
+    .swiper-container {
+        display: block;
+    }
+    .lifeSmall p {
+        display: none;
+    }
+    .news h1 {
+        margin-bottom: 1rem;
+        background: #f8f8f8;
+    }
+
+}
+.lifeLink:hover span{
+    opacity: 1;
+    right: 30px;
+}
+
+
+
+
+
+
+
+
